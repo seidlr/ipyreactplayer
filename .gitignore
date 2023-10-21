@@ -1,0 +1,6 @@
+ipypopout.egg-info
+build
+dist
+
+.ipynb_checkpoints
+*.pyc
