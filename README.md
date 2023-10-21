@@ -51,15 +51,5 @@ player.url = 'https://vimeo.com/755209790/8e428d0213?share=copy'
 ## Installation
 
 ```
-$ pip install ipreactplayer
+$ pip install ipyreactplayer
 ```
-
-## API
-
-- PopoutButton
-  - constructor arguments:
-    - `target - ipywidgets.Widget | None`: The widget that will be shown in the popout window.
-    - `target_model_id - str`: The widget id (defaults to `target._model_id`)
-    - `window_name - str`: If a window with the same name is available it will be reused, otherwise a new window is created (defaults to `target_model_id`).
-      See [https://developer.mozilla.org/en-US/docs/Web/API/Window/open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) for more details.
-    - `window_features - str`: See: [https://developer.mozilla.org/en-US/docs/Web/API/Window/open#window_features](https://developer.mozilla.org/en-US/docs/Web/API/Window/open#window_features)
