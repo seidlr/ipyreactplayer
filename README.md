@@ -1,6 +1,6 @@
 # Ipyreactplayer
 
-[![Version](https://img.shields.io/pypi/v/ipyreactplayer.svg)](https://pypi.python.org/project/ipyreactplayer) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/seidlr/ipyreactplayer/blob/master/example.ipynb)
+[![Version](https://img.shields.io/pypi/v/ipyreactplayer.svg)](https://pypi.python.org/project/ipyreactplayer) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/seidlr/ipyreactplayer/blob/main/example.ipynb)
 
 Use Ipyreactplayer if you want to be able to control a videoplayer in a jupyter notebook, lab, voila or solara.
 It is a simple wrapper using [Ipyreact](https://github.com/widgetti/ipyreact) with [react-player](https://github.com/cookpete/react-player)
@@ -8,7 +8,7 @@ Similar to [streamlit-player](https://github.com/okld/streamlit-player) or [dash
 
 Works with:
 
-- Google Colab [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/seidlr/ipyreactplayer/blob/master/example.ipynb)
+- Google Colab [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/seidlr/ipyreactplayer/blob/main/example.ipynb)
 - Jupyter notebook
 - Jupyter lab
 - Voila (`version>0.5`)
