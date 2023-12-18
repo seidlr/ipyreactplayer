@@ -31,7 +31,7 @@ jobs:
       - name: Upload builds
         uses: actions/upload-artifact@v3
         with:
-          name: ipypopout-dist-${{ github.run_number }}
+          name: ipyreactplayer-dist-${{ github.run_number }}
           path: |
             ./dist
 
@@ -47,7 +47,7 @@ jobs:
 
       - uses: actions/download-artifact@v3
         with:
-          name: ipypopout-dist-${{ github.run_number }}
+          name: ipyreactplayer-dist-${{ github.run_number }}
           # because we only upload 1 file, it's not put in a subdirectory
           path: dist
 
@@ -62,42 +62,7 @@ jobs:
       - name: Import
         # do the import in a subdirectory, as after installation, files in de current directory are also imported
         run: |
-          (mkdir test-install; cd test-install; python -c "from ipypopout import PopoutButton")
-
-  ui-test:
-    needs: [build]
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v2
-
-      - uses: actions/download-artifact@v3
-        with:
-          # because we only upload 1 file, it's not put in a subdirectory
-          path: dist
-          name: ipypopout-dist-${{ github.run_number }}
-
-      - name: Install Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.8
-
-      - name: Install ipypopout and test deps
-        run: |
-          wheel=(dist/*.whl)
-          pip install ${wheel}[test] "jupyter_server<2"
-
-      - name: Install playwright browsers
-        run: playwright install chromium
-
-      - name: Run ui-tests
-        run: pytest tests/ui/ --video=retain-on-failure --solara-update-snapshots-ci -s
-
-      - name: Upload Test artifacts
-        if: always()
-        uses: actions/upload-artifact@v2
-        with:
-          name: ipypopout-test-results
-          path: test-results
+          (mkdir test-install; cd test-install; python -c "from ipyreactplayer import VideoPlayer")
 
   release:
     if: startsWith(github.event.ref, 'refs/tags/v')
@@ -108,7 +73,7 @@ jobs:
         with:
           # because we only upload 1 file, it's not put in a subdirectory
           path: dist
-          name: ipypopout-dist-${{ github.run_number }}
+          name: ipyreactplayer-dist-${{ github.run_number }}
 
       - name: Install Python
         uses: actions/setup-python@v2
