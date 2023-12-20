@@ -56,7 +56,7 @@ setup(
     packages=['ipyreactplayer'],
     install_requires=[
         'ipywidgets>=7.7',
-        'anywidget==0.7.0',
+        'anywidget<=0.7.0',
         'ipyreact>=0.3.0',
         'voila>=0.5.0'
     ],
