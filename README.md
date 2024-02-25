@@ -12,10 +12,8 @@ Works with:
 - Jupyter notebook
 - Jupyter lab
 - Voila (`version>0.5`)
-
-Currently does not work with:
-
-- [Solara](https://github.com/widgetti/solara/) see [Issue](https://github.com/widgetti/solara/issues/333)
+- [Solara](https://github.com/widgetti/solara/)
+  see the example under `solara`.
 
 ## Usage
 
@@ -50,7 +48,18 @@ player.url = 'https://vimeo.com/755209790/8e428d0213?share=copy'
 
 ### With Solara
 
-`solara run solara.ipynb`
+From notebook
+
+```cd solara/notebook
+solara run solara.ipynb
+```
+
+As app
+
+```
+cd solara/pages
+solara run .
+```
 
 ## Installation
 
